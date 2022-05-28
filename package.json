@@ -1,0 +1,37 @@
+{
+  "name": "swapbridge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "find-orphans": "./node_modules/.bin/find-orphans"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mak1996@bitbucket.org/jointer-new/swapbridge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "advanced-seo-checker": "^3.2.0",
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "dom-parser": "^0.1.6",
+    "express": "^4.17.1",
+    "gsc-cli": "^0.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
+    "pagespeed-insights": "^1.0.2",
+    "parse-canonical-url": "^0.3.0",
+    "structured-data-testing-tool": "^4.5.0"
+  },
+  "homepage": "https://bitbucket.org/jointer-new/swapbridge#readme",
+  "devDependencies": {
+    "find-orphans": "^0.0.1",
+    "gpagespeed": "^8.0.2",
+    "https-checker": "^2.0.4",
+    "seo-friendly-slugify": "^1.0.5"
+  }
+}

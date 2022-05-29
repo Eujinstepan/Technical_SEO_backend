@@ -53,7 +53,7 @@ module.exports = {
       })
       .catch(error => {
         console.error(error)
-        return error;
+        return error.errno;
       })
 
     // Add structured data
@@ -98,14 +98,15 @@ module.exports = {
 
     // Leverage "Inspect URL" feature in GSC, Ensure your website is mobile-friendly
     let summary = await crawler.analyze(urls).then(function (summary) {
-      let util = require('util');
       console.log("..................");
-      console.log(util.inspect(summary.issues));
-      return util.inspect(summary);
+      console.log(">>>>>>", summary);
+      return summary;
     });
+    console.log(summary, "justin")
 
     res.status(200).json({
       leverage: summary,
+      isMoblieFriendly: summary.pages[0]["isMobileFriendly"],
       pagespeed: _pagespeed,
       canonical: isCanonical,
       Ishttpsurl: isHTTPSUrl,

@@ -102,11 +102,12 @@ module.exports = {
       console.log(">>>>>>", summary);
       return summary;
     });
-    console.log(summary, "justin")
-
+    console.log(summary.pages[0]["isMobileFriendly"], "justin")
+    let isMobileFriendly = summary.pages[0]["isMobileFriendly"];
+    console.log("ismobilefriendly", isMobileFriendly);
     res.status(200).json({
       leverage: summary,
-      isMoblieFriendly: summary.pages[0]["isMobileFriendly"],
+      isMobileFriendly: isMobileFriendly,
       pagespeed: _pagespeed,
       canonical: isCanonical,
       Ishttpsurl: isHTTPSUrl,
